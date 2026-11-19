@@ -5,6 +5,14 @@ const RouterContext = createContext();
 const getInitialPath = () => {
   if (typeof window === 'undefined') return '/';
   
+  // Check if redirected from 404.html (GitHub Pages SPA)
+  const redirected = sessionStorage.getItem("redirectPath");
+  if (redirected) {
+    sessionStorage.removeItem("redirectPath");
+    const clean = redirected.split('?')[0].split('#')[0];
+    if (clean) return clean.toLowerCase();
+  }
+
   // Check hash first (for gh-pages or static hosting)
   if (window.location.hash) {
     const hash = window.location.hash.replace('#', '');
