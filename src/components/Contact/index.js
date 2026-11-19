@@ -112,7 +112,7 @@ export default function Contact() {
                       id="fullName"
                       name="fullName"
                       type="text"
-                      placeholder="John Doe"
+                      placeholder="Full Name"
                       value={formData.fullName}
                       onChange={handleChange}
                       required
@@ -125,7 +125,7 @@ export default function Contact() {
                       id="company"
                       name="company"
                       type="text"
-                      placeholder="Acme Inc."
+                      placeholder="Company"
                       value={formData.company}
                       onChange={handleChange}
                     />
@@ -158,7 +158,7 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows="4"
-                    placeholder="Tell us about your project..."
+                    placeholder="Message"
                     value={formData.message}
                     onChange={handleChange}
                     required

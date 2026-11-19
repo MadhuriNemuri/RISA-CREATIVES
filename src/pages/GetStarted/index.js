@@ -191,7 +191,7 @@ export default function GetStarted() {
                             id="fullName"
                             name="fullName"
                             type="text"
-                            placeholder="John Doe"
+                            placeholder="Full Name"
                             value={formData.fullName}
                             onChange={handleChange}
                             autoFocus
@@ -205,7 +205,7 @@ export default function GetStarted() {
                             id="companyName"
                             name="companyName"
                             type="text"
-                            placeholder="Acme Inc."
+                            placeholder="Company Name"
                             value={formData.companyName}
                             onChange={handleChange}
                           />
@@ -218,7 +218,7 @@ export default function GetStarted() {
                           id="workEmail"
                           name="workEmail"
                           type="email"
-                          placeholder="john@acme.com"
+                          placeholder="Work Email"
                           value={formData.workEmail}
                           onChange={handleChange}
                           required
@@ -320,7 +320,7 @@ export default function GetStarted() {
                           id="projectBrief"
                           name="projectBrief"
                           rows="4"
-                          placeholder="What are the key goals, deliverables, or inspiration for this project?"
+                          placeholder="Project Brief"
                           value={formData.projectBrief}
                           onChange={handleChange}
                         ></textarea>

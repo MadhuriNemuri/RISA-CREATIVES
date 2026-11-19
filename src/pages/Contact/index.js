@@ -198,7 +198,7 @@ export default function ContactPage() {
                         id="fullName"
                         name="fullName"
                         type="text"
-                        placeholder="John Doe"
+                        placeholder="Full Name"
                         value={formData.fullName}
                         onChange={handleInputChange}
                         required
@@ -211,7 +211,7 @@ export default function ContactPage() {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="john@company.com"
+                        placeholder="Email Address"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
@@ -246,7 +246,7 @@ export default function ContactPage() {
                       id="projectBrief"
                       name="projectBrief"
                       rows="5"
-                      placeholder="Tell us about your vision..."
+                      placeholder="Project Brief"
                       value={formData.projectBrief}
                       onChange={handleInputChange}
                       required
