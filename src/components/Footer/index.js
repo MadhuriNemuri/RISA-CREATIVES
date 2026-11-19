@@ -30,7 +30,11 @@ export default function Footer() {
                 role="button"
                 tabIndex={0}
               >
-                <div className="logo-circle">R</div>
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/logo_img/image 287.png`}
+                  alt="RISA CREATIVES Logo"
+                  className="footer-brand-logo"
+                />
                 <h2>RISA CREATIVES</h2>
               </div>
 

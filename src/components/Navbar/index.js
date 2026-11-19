@@ -44,9 +44,11 @@ export default function Navbar() {
           tabIndex={0}
           title="Risa Creatives Home"
         >
-          <div className="logo-icon-wrap">
-            <span className="logo-sparkle">✦</span>
-          </div>
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/logo_img/image 287.png`}
+            alt="RISA CREATIVES Logo"
+            className="navbar-brand-logo"
+          />
           <span className="logo-text">RISA CREATIVES</span>
         </div>
 

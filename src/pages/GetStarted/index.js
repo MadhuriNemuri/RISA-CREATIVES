@@ -7,7 +7,6 @@ import {
   FiArrowRight,
   FiArrowLeft,
   FiCheck,
-  FiCheckCircle,
 } from "react-icons/fi";
 import "./index.css";
 
@@ -138,7 +137,11 @@ export default function GetStarted() {
             <div className="wizard-body">
               {submissionSuccess ? (
                 <div className="wizard-success-state">
-                  <FiCheckCircle className="wizard-success-icon" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/logo_img/image 287.png`}
+                    alt="RISA CREATIVES Logo"
+                    className="wizard-brand-icon"
+                  />
                   <h2>Journey Commenced!</h2>
                   <p>
                     Thank you, <strong>{formData.fullName}</strong>. We have generated your engagement dossier under Reference ID:
