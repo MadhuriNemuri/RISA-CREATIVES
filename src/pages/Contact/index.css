@@ -1,0 +1,341 @@
+.contact-page {
+  padding-bottom: 60px;
+}
+
+.contact-hero-section {
+  padding: 80px 20px 80px;
+}
+
+.contact-main-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+.contact-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-headline {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+}
+
+.contact-lead-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.contact-meta-row {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.meta-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.meta-link:hover {
+  color: var(--accent-blue-light);
+}
+
+.social-pill-group {
+  display: flex;
+  gap: 10px;
+}
+
+.social-pill-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.social-pill-btn:hover {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+/* Direct Response Card */
+.direct-response-card {
+  padding: 24px 28px;
+  border-radius: 20px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.direct-response-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+.avatar-icon {
+  font-size: 20px;
+}
+
+.direct-response-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.direct-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.direct-time {
+  font-size: 0.78rem;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.clock-icon {
+  font-size: 12px;
+}
+
+.direct-quote {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Right Column: Proposal Form Card */
+.proposal-form-card {
+  padding: 44px 38px;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.proposal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.proposal-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.proposal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.proposal-field label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.proposal-field input,
+.proposal-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: var(--transition);
+  outline: none;
+}
+
+.proposal-field input:focus,
+.proposal-field textarea:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Service Chips */
+.service-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-btn {
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.chip-btn:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  color: var(--text-primary);
+}
+
+.chip-btn.selected {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: var(--accent-blue);
+  color: #93c5fd;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+}
+
+.send-proposal-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  margin-top: 6px;
+  border-radius: 9999px;
+}
+
+.proposal-disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.proposal-disclaimer a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+/* Success Box */
+.proposal-success-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 16px;
+}
+
+.proposal-success-icon {
+  font-size: 54px;
+  color: #38bdf8;
+}
+
+.proposal-success-box h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.proposal-success-box p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ticket-id {
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.sub-note {
+  font-size: 0.88rem !important;
+  color: var(--text-muted) !important;
+}
+
+.reset-form-btn {
+  margin-top: 10px;
+  padding: 12px 28px;
+}
+
+@media (max-width: 960px) {
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-headline {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-headline {
+    font-size: 2.2rem;
+  }
+
+  .proposal-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-meta-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .proposal-form-card {
+    padding: 28px 20px;
+  }
+}

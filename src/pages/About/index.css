@@ -1,0 +1,465 @@
+.about-page {
+  padding-bottom: 60px;
+}
+
+/* About Hero */
+.about-hero {
+  padding: 100px 20px 80px;
+  text-align: center;
+}
+
+.about-hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-hero-title {
+  font-size: 4rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+}
+
+.highlight-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3b82f6;
+}
+
+.about-hero-subtitle {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Core Mission Section */
+.about-mission-section {
+  padding: 60px 20px 100px;
+}
+
+.about-mission-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mission-title {
+  font-size: 2.7rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.mission-desc {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+}
+
+.mission-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.mission-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.pill-icon {
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+/* Refractive Optical Prism Stage */
+.mission-visual-wrap {
+  width: 100%;
+}
+
+.prism-card {
+  padding: 30px;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.prism-stage {
+  height: 320px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, rgba(2, 6, 23, 0.95) 70%);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.prism-pedestal {
+  position: absolute;
+  bottom: 45px;
+  width: 160px;
+  height: 36px;
+  background: linear-gradient(180deg, #1e293b 0%, #090d16 100%);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.prism-cube {
+  position: absolute;
+  bottom: 76px;
+  width: 86px;
+  height: 86px;
+  z-index: 5;
+  transform: rotate(-15deg);
+}
+
+.cube-face {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(147, 197, 253, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.cube-front {
+  transform: translateZ(20px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(59, 130, 246, 0.15) 100%);
+}
+
+.cube-top {
+  height: 30px;
+  transform: translateY(-20px) rotateX(60deg);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cube-side {
+  width: 30px;
+  transform: translateX(65px) rotateY(60deg);
+  background: rgba(30, 58, 138, 0.4);
+}
+
+.cube-glow-core {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 28px;
+  left: 28px;
+  background: #38bdf8;
+  border-radius: 50%;
+  filter: blur(12px);
+  box-shadow: 0 0 25px #38bdf8;
+}
+
+/* Lasers */
+.laser-beam-in {
+  position: absolute;
+  left: -20px;
+  top: 130px;
+  width: 200px;
+  height: 2px;
+  background: #60a5fa;
+  box-shadow: 0 0 12px #38bdf8;
+  transform: rotate(18deg);
+  z-index: 3;
+}
+
+.laser-beam-out {
+  position: absolute;
+  right: 0;
+  height: 2px;
+  z-index: 4;
+}
+
+.beam-blue {
+  bottom: 95px;
+  right: 40px;
+  width: 170px;
+  background: #2563eb;
+  box-shadow: 0 0 15px #3b82f6;
+  transform: rotate(-15deg);
+}
+
+.beam-cyan {
+  bottom: 80px;
+  right: 20px;
+  width: 190px;
+  background: #38bdf8;
+  box-shadow: 0 0 18px #38bdf8;
+  transform: rotate(-8deg);
+}
+
+.beam-white {
+  bottom: 110px;
+  right: 60px;
+  width: 150px;
+  background: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+  transform: rotate(-22deg);
+}
+
+.prism-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.prism-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  letter-spacing: 0.12em;
+}
+
+/* Principles Section */
+.about-principles-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-principles-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.principles-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 50px;
+  letter-spacing: -0.025em;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.principle-card {
+  padding: 40px 32px;
+  border-radius: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.principle-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.principle-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.principle-title {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.principle-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* The Collective Section */
+.about-collective-section {
+  padding: 80px 20px 100px;
+}
+
+.about-collective-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.collective-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: flex-end;
+}
+
+.collective-title {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.collective-statement {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.collective-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.collective-card {
+  padding: 30px 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.collective-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.collective-role {
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.collective-item-title {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.collective-item-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* About CTA Section */
+.about-cta-section {
+  padding: 40px 20px 60px;
+}
+
+.about-cta-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  border-radius: 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.about-cta-glow {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.about-cta-card h2 {
+  font-size: 2.4rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.025em;
+}
+
+.about-cta-btn {
+  padding: 16px 36px;
+  font-size: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 960px) {
+  .about-mission-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-title {
+    font-size: 3rem;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collective-top {
+    grid-template-columns: 1fr;
+  }
+
+  .collective-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .mission-title,
+  .principles-title,
+  .collective-title {
+    font-size: 1.9rem;
+  }
+
+  .collective-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-card h2 {
+    font-size: 1.8rem;
+  }
+}

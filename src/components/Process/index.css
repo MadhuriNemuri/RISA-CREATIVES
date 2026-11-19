@@ -1,271 +1,113 @@
-/* ===========================
-   PROCESS SECTION
-=========================== */
-
 .process-section {
-    width: 100%;
-    max-width: 1280px;
-
-    margin: 0 auto;
-
-    padding: 120px 24px 100px;
-
-    position: relative;
-
-    text-align: center;
+  width: 100%;
+  padding: 80px 20px 90px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-/* ===========================
-   SUBTITLE
-=========================== */
-
-.process-subtitle {
-
-    display: inline-block;
-
-    font-size: 11px;
-
-    letter-spacing: 5px;
-
-    color: #7E89A8;
-
-    margin-bottom: 18px;
-
-    text-transform: uppercase;
+.process-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
 }
-
-/* ===========================
-   HEADING
-=========================== */
 
 .process-heading {
-
-    font-size: 54px;
-
-    color: white;
-
-    font-weight: 700;
-
-    margin-bottom: 90px;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 60px;
+  letter-spacing: -0.025em;
 }
-
-/* ===========================
-   LINE
-=========================== */
-
-.process-line {
-
-    position: absolute;
-
-    top: 285px;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 1px;
-
-    background: rgba(255,255,255,.08);
-
-    z-index: 0;
-}
-
-/* ===========================
-   GRID
-=========================== */
 
 .process-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    gap: 30px;
-
-    position: relative;
-
-    z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
 }
-
-/* ===========================
-   CARD
-=========================== */
 
 .process-card {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
 }
 
-/* ===========================
-   CIRCLE
-=========================== */
+.process-circle-wrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
 
 .process-circle {
-
-    width: 82px;
-
-    height: 82px;
-
-    border-radius: 50%;
-
-    background: #2C3135;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 20px;
-
-    font-weight: 700;
-
-    color: white;
-
-    margin-bottom: 26px;
-
-    transition: .35s;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+  transition: var(--transition);
 }
 
-.process-card:hover .process-circle{
-
-    background:#2563EB;
-
-    transform:translateY(-6px);
+.process-card:hover .process-circle {
+  background: var(--accent-blue);
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(37, 99, 235, 0.6);
+  border-color: #60a5fa;
 }
 
-/* ===========================
-   TITLE
-=========================== */
-
-.process-card h3{
-
-    color:white;
-
-    font-size:30px;
-
-    font-weight:600;
-
-    margin-bottom:18px;
+.process-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
 }
 
-/* ===========================
-   DESCRIPTION
-=========================== */
-
-.process-card p{
-
-    max-width:230px;
-
-    color:#A8B1C8;
-
-    font-size:18px;
-
-    line-height:1.7;
+.process-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 240px;
 }
 
-/* ===========================
-   TABLET
-=========================== */
-
-@media (max-width:1024px){
-
-.process-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-row-gap:70px;
+.process-cta-wrap {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
 }
 
-.process-line{
-
-display:none;
+.process-view-btn {
+  padding: 14px 30px;
+  font-size: 0.95rem;
 }
 
-.process-heading{
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 
-font-size:44px;
-
-margin-bottom:70px;
+  .process-heading {
+    font-size: 2.2rem;
+  }
 }
 
-}
+@media (max-width: 500px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
 
-/* ===========================
-   MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-.process-section{
-
-padding:80px 20px;
-}
-
-.process-grid{
-
-grid-template-columns:1fr;
-
-gap:55px;
-}
-
-.process-heading{
-
-font-size:34px;
-
-line-height:1.3;
-
-margin-bottom:50px;
-}
-
-.process-card h3{
-
-font-size:24px;
-}
-
-.process-card p{
-
-font-size:16px;
-
-max-width:320px;
-}
-
-.process-circle{
-
-width:70px;
-
-height:70px;
-
-font-size:18px;
-}
-
-}
-
-/* ===========================
-   SMALL MOBILE
-=========================== */
-
-@media (max-width:480px){
-
-.process-heading{
-
-font-size:28px;
-}
-
-.process-subtitle{
-
-font-size:10px;
-
-letter-spacing:3px;
-}
-
-.process-card p{
-
-font-size:15px;
-}
-
+  .process-heading {
+    font-size: 1.85rem;
+  }
 }

@@ -1,243 +1,153 @@
-/* ==========================
-   SERVICES SECTION
-========================== */
-
 .services-section {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 50px 24px;
-  background: transparent;
+  padding: 60px 20px 80px;
+  position: relative;
+  z-index: 2;
 }
 
-/* ==========================
-   GRID
-========================== */
+.services-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-/* ==========================
-   CARD
-========================== */
-
 .service-card {
+  padding: 32px 28px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
   position: relative;
-  overflow: hidden;
-
-  height: 280px;
-
-  padding: 24px;
-
-  border-radius: 28px;
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  background: linear-gradient(
-    135deg,
-    #0b1129 0%,
-    #15224f 100%
-  );
-
-  transition: all 0.35s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(59, 130, 246, 0.3);
-
-  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 15px 35px -10px rgba(37, 99, 235, 0.3);
 }
-
-/* ==========================
-   TOP
-========================== */
 
 .card-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
 }
-
-/* ==========================
-   ICON
-========================== */
 
 .icon-box {
-  width: 42px;
-  height: 42px;
-
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-
-  background: #2563eb;
-
+  background: var(--accent-blue);
+  color: #ffffff;
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  color: #fff;
-
-  font-size: 18px;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  transition: var(--transition);
 }
 
-/* ==========================
-   BADGE
-========================== */
+.service-card:hover .icon-box {
+  transform: scale(1.08);
+}
+
+.top-right-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .badge {
-  padding: 4px 12px;
-
-  border-radius: 30px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  color: #94a3b8;
-
-  font-size: 10px;
-
-  letter-spacing: 1.8px;
-
-  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
 }
 
-/* ==========================
-   TITLE
-========================== */
+.service-arrow-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: var(--transition);
+}
 
-.service-card h2 {
-  margin-top: 32px;
+.service-card:hover .service-arrow-wrap {
+  opacity: 1;
+  color: var(--accent-blue-light);
+  transform: translate(0, 0);
+}
 
-  color: #fff;
-
-  font-size: 22px;
-
-  line-height: 1.2;
-
+.service-card-title {
+  font-size: 1.45rem;
   font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
-
-/* ==========================
-   TAGS
-========================== */
 
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-
   gap: 8px;
-
-  margin-top: 24px;
+  margin-top: auto;
 }
 
-.tag-list span {
-  padding: 8px 14px;
-
-  border-radius: 999px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  color: #9ca3af;
-
-  font-size: 11px;
-
-  transition: 0.3s;
+.service-tag {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  transition: var(--transition);
+  cursor: pointer;
+  user-select: none;
 }
 
-.tag-list span:hover {
-  color: #fff;
-  border-color: #2563eb;
+.service-tag:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  color: var(--text-primary);
+  background: rgba(37, 99, 235, 0.1);
 }
 
-/* ==========================
-   TABLET
-========================== */
+.service-tag.active {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: var(--accent-blue);
+  color: #93c5fd;
+}
 
 @media (max-width: 1024px) {
-
-  .services-section {
-    padding: 70px 20px;
-  }
-
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .service-card {
-    height: 280px;
-  }
-
-  .service-card h2 {
-    font-size: 20px;
-  }
-
 }
 
-/* ==========================
-   MOBILE
-========================== */
-
-@media (max-width: 768px) {
-
-  .services-section {
-    padding: 60px 16px;
-  }
-
+@media (max-width: 640px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
 
   .service-card {
-    height: auto;
-    min-height: 250px;
-    padding: 22px;
+    padding: 24px 20px;
   }
-
-  .service-card h2 {
-    margin-top: 26px;
-    font-size: 26px;
-  }
-
-  .tag-list {
-    margin-top: 20px;
-  }
-
-  .tag-list span {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-}
-
-/* ==========================
-   SMALL MOBILE
-========================== */
-
-@media (max-width: 480px) {
-
-  .service-card {
-    min-height: 230px;
-    border-radius: 22px;
-  }
-
-  .icon-box {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-
-  .service-card h2 {
-    font-size: 24px;
-  }
-
-  .badge {
-    font-size: 9px;
-    padding: 4px 10px;
-  }
-
 }

@@ -1,183 +1,162 @@
-.hero{
-
-position:relative;
-
-padding-top:120px;
-
-padding-bottom:100px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-overflow:hidden;
+.hero-section {
+  position: relative;
+  padding: 100px 20px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  min-height: 580px;
 }
 
-.hero-content{
-
-max-width:900px;
+.hero-container {
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
 }
 
-.hero h1{
-
-font-size:82px;
-
-line-height:92px;
-
-font-weight:800;
-
-color:white;
-
-margin-bottom:30px;
+.hero-title {
+  font-size: 4.8rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  letter-spacing: -0.03em;
 }
 
-.hero span{
-
-color:#2563EB;
+.hero-highlight {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3b82f6;
+  display: inline-block;
+  text-shadow: 0 0 35px rgba(59, 130, 246, 0.4);
 }
 
-.hero p{
-
-max-width:700px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:34px;
-
-color:#94A3B8;
+.hero-subtitle {
+  max-width: 680px;
+  margin: 0 auto 36px;
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
-.hero button{
-
-margin-top:40px;
-
-background:white;
-
-border:none;
-
-padding:18px 40px;
-
-border-radius:40px;
-
-font-weight:700;
-
-cursor:pointer;
-
-transition:.3s;
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-.hero button:hover{
-
-transform:translateY(-3px);
+.hero-btn {
+  padding: 16px 36px;
+  font-size: 1rem;
 }
 
-.tag{
-
-position:absolute;
-
-padding:14px 24px;
-
-border-radius:40px;
-
-background:rgba(255,255,255,.03);
-
-border:1px solid rgba(255,255,255,.08);
-
-color:white;
-
-font-size:15px;
-
-backdrop-filter:blur(15px);
+/* Floating Glass Badges */
+.hero-floating-tag {
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease;
+  animation: floatBadge 6s ease-in-out infinite alternate;
 }
 
-.tag1{
-
-left:10%;
-top:120px;
+.tag-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tag2{
-
-right:12%;
-top:120px;
+.tag-top-left {
+  top: 14%;
+  left: 8%;
+  animation-delay: 0s;
 }
 
-.tag3{
-
-left:8%;
-bottom:160px;
+.tag-top-right {
+  top: 16%;
+  right: 10%;
+  animation-delay: 1.5s;
 }
 
-.tag4{
-
-right:10%;
-bottom:200px;
+.tag-bottom-left {
+  bottom: 18%;
+  left: 7%;
+  animation-delay: 3s;
 }
 
-@media(max-width:992px){
-
-.hero h1{
-
-font-size:60px;
-
-line-height:70px;
+.tag-bottom-right {
+  bottom: 22%;
+  right: 9%;
+  animation-delay: 4.5s;
 }
 
-.hero p{
-
-font-size:18px;
+@keyframes floatBadge {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(6px) rotate(-1deg);
+  }
 }
 
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .tag-top-left {
+    left: 3%;
+  }
+
+  .tag-top-right {
+    right: 3%;
+  }
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
-.hero{
+  .hero-title {
+    font-size: 2.7rem;
+    line-height: 1.15;
+  }
 
-padding-top:90px;
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-padding-inline:20px;
+  .hero-floating-tag {
+    display: none;
+  }
 }
 
-.hero h1{
-
-font-size:42px;
-
-line-height:50px;
-}
-
-.hero p{
-
-font-size:16px;
-
-line-height:28px;
-}
-
-.tag{
-
-display:none;
-}
-
-.hero button{
-
-padding:15px 28px;
-}
-
-}
-
-@media(max-width:480px){
-
-.hero h1{
-
-font-size:34px;
-
-line-height:42px;
-}
-
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
 }
